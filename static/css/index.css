@@ -26,7 +26,22 @@ hr{
 textarea:focus, input:focus{
     outline: none;
 }
-
+::-webkit-scrollbar{
+width: 1px;
+height: 1px;
+}
+::-webkit-scrollbar-thumb{
+background: #000000;
+border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover{
+background: #FFFFFF;
+}
+::-webkit-scrollbar-track{
+background: #BBC1CD;
+border-radius: 0px;
+box-shadow: inset 0px 0px 0px 0px #F0F0F0;
+}
 .clear{
     clear: both;
 }
@@ -59,7 +74,8 @@ textarea:focus, input:focus{
     border: 1px;
     border-radius: 1px;
     border-style: solid;
-    border-color: rgba(70,88,102,255)
+    border-color: rgba(70,88,102,255);
+    
 }
 
 .titulo h1{
@@ -71,13 +87,13 @@ textarea:focus, input:focus{
 
 /**Parte do chat**/
 .chat{
-    height: 95%;
-    width: 95%;
+    height: 100%;
+    
     left: 20%;
     top: 0px;
     height: auto;
     max-height: 500px;
-    min-height: 100% !important;
+    min-height: 90% !important;
     width: auto;
     min-width: 80% !important;
     position: absolute;
@@ -85,12 +101,13 @@ textarea:focus, input:focus{
     padding-left: 9px;
     background-color: rgba(187,193,205,255);
     z-index: 1;
+    overflow-y: auto;
+    
 }
 
 
 /**Caixa da mensagem**/
 .chat-mensagens{
-    
     background-color: rgba(187,193,205,255);
     z-index: 1;
 }
@@ -113,6 +130,8 @@ textarea:focus, input:focus{
     float: right;
     color: rgba(92,111,126,255);
     position: relative;
+    font-size: 20px;
+    margin-bottom: 3px;
 }
 
 .hora{
@@ -120,14 +139,18 @@ textarea:focus, input:focus{
     color: rgba(92,111,126,255);
     position: relative;
     text-indent: 0px;
+    font-size: 17px;
+    margin-top: 3px;
 }
 
 /**Caixa dos botões/form**/
 
 .escrever{
     position: absolute;
-    width: 95%;
-    max-height: 50px;
+    width: 79%;
+    left: 20.4%;
+    height: auto;
+    max-height: 50px !important;
     bottom: 10px;
     background-color: white;
 }
@@ -141,11 +164,18 @@ textarea:focus, input:focus{
     height: 50px;
 }
 
-.escrever input[type="submit"]{
+.botao {
     border: none;
     float: right;
     position: relative;
-    left: 5px;
+    display: block;
+    font-size: 20px;
+    text-transform: uppercase;
     width: 5%;
     height: 50px;
+}
+
+.fas fa-paper-plane{
+    z-index: 9999;
+
 }
