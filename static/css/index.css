@@ -2,14 +2,16 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Courier, serif;
 }
 
+/**Boot**/
 html, body { 
     height: 100%; 
     width: 100%; 
     margin: 0; 
     overflow: hidden;
-    background-color: rgb(123, 9, 169);
+    background-color: rgba(45,57,69,255);
 }
 
 hr{
@@ -21,67 +23,129 @@ hr{
     padding: 0;
 }
 
+textarea:focus, input:focus{
+    outline: none;
+}
+
+.clear{
+    clear: both;
+}
+
+/**Formatação caixa chat+usuarios**/
 .caixa-chat{
     height: 95%;
     width: 95%;
-    margin: 5px;
+    margin: 1px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     position: relative;
-    background-color: white;
+    background-color: rgba(70,88,102,255);
     z-index: 0;
-
-    border: 2px;
-    border-radius: 2px;
+    border: 1px;
+    border-radius: 1px;
     border-style: solid;
-    border-color: black;
+    border-color: rgba(70,88,102,255);
 }
 
-.linha{
-    border-left: 6px solid black;
-    height: auto;
-    min-height: 100% !important;
-    position: absolute;
-    left: 20%;
-    margin-left: -3px;
-    top: 0;
-    z-index: 9999;
-    
-}
 
+/**Parte dos usuarios**/
 .usuarios{
-    background-color: aqua;
+    background-color: rgba(92,111,126,255);
     height: auto;
     min-height: 100% !important;
     width: max-content;
     width: 20%;
+    border: 1px;
+    border-radius: 1px;
+    border-style: solid;
+    border-color: rgba(70,88,102,255)
 }
 
 .titulo h1{
+    margin-top: 15px;
     text-align: center;
-    color: rgb(47, 0, 255);
+    color: black;
     
 }
 
+/**Parte do chat**/
 .chat{
     height: 95%;
     width: 95%;
     left: 20%;
     top: 0px;
     height: auto;
+    max-height: 500px;
     min-height: 100% !important;
     width: auto;
     min-width: 80% !important;
     position: absolute;
     padding: 5px;
     padding-left: 9px;
-    background-color: blue;
+    background-color: rgba(187,193,205,255);
     z-index: 1;
 }
 
+
+/**Caixa da mensagem**/
+.chat-mensagens{
+    
+    background-color: rgba(187,193,205,255);
+    z-index: 1;
+}
 .mensagens{
+    position: relative;
+    float: right;
     background-color: white;
-    width: fit-content;
-    height: 150px;
+    width: 80%;
+    height: fit-content;
+    border: 1px;
+    border-color: rgb(182, 182, 182);
+    border-radius: 15px 0px 15px 15px;
+    text-indent: 50px;
+    text-align: justify;
+    margin-bottom: 7px;
+    padding: 20px;
+}
+
+.user{
+    float: right;
+    color: rgba(92,111,126,255);
+    position: relative;
+}
+
+.hora{
+    float: left;
+    color: rgba(92,111,126,255);
+    position: relative;
+    text-indent: 0px;
+}
+
+/**Caixa dos botões/form**/
+
+.escrever{
+    position: absolute;
+    width: 95%;
+    max-height: 50px;
+    bottom: 10px;
+    background-color: white;
+}
+
+.escrever input[type="text"]{
+    border: none;
+    position: relative;
+    float: left;
+    left: 5px;
+    width: 95%;
+    height: 50px;
+}
+
+.escrever input[type="submit"]{
+    border: none;
+    float: right;
+    position: relative;
+    left: 5px;
+    width: 5%;
+    height: 50px;
 }
