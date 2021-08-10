@@ -26,22 +26,29 @@ hr{
 textarea:focus, input:focus{
     outline: none;
 }
+
 ::-webkit-scrollbar{
-width: 1px;
-height: 1px;
+    width: 6px;
+    height: 6px;
 }
+
 ::-webkit-scrollbar-thumb{
-background: #000000;
-border-radius: 0px;
+    background: #B3AFB3;
+    border: 10px solid #525252;
+    border-radius: 30px;
 }
+
 ::-webkit-scrollbar-thumb:hover{
-background: #FFFFFF;
+    background: #6E566E;
 }
+
 ::-webkit-scrollbar-track{
-background: #BBC1CD;
-border-radius: 0px;
-box-shadow: inset 0px 0px 0px 0px #F0F0F0;
+    background: #BBC1CD;
+    border-radius: 0px;
+    box-shadow: inset 0px 0px 0px 0px #F0F0F0;
 }
+
+
 .clear{
     clear: both;
 }
